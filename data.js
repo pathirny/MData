@@ -34,4 +34,4 @@ let movieData = {
     },
   };
 
-  export { movieData };
+    export { movieData };
