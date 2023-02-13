@@ -12,11 +12,21 @@ console.log(movieDataAsArray[0][1])
 function first () {
     let plot = movieDataAsArray[0][1].plot;
     let rating = movieDataAsArray[0][1].rating;
+    let darjeeling = movieDataAsArray[0][0];
+    let year = movieDataAsArray[0][1].year;
+    let cast = movieDataAsArray[0][1].cast;
+    let runtime = movieDataAsArray[0][1].runtime;
+
+    document.getElementById("darjeeling").innerHTML = darjeeling;
     document.getElementById("plot1").innerHTML = plot;
     document.getElementById("rating1").innerHTML = rating;
+    document.getElementById("year1").innerHTML = year;
+    document.getElementById("cast1").innerHTML = cast;
+    document.getElementById("runtime1").innerHTML = runtime;
 }
 
 first();
 
 
 // Next create a for loop which will creat p elements and push all informations into appropriate place
+
