@@ -29,11 +29,13 @@ first();
 
 
 // Next create a for loop which will creat p elements and push all informations into appropriate place
-let parent = document.querySelector('#description2');
+// let parent = document.querySelector('#description2');
+let parent = document.getElementById('description2');
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 4; i++) {
+
     let p = document.createElement('p');
-    p.textContent = movieDataAsArray[0][1].plot;
-    
-    parent.append(p);
+
+    p.textContent = movieDataAsArray[1][0];
+    parent.appendChild(p);
 }
