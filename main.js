@@ -30,12 +30,22 @@ first();
 
 // Next create a for loop which will creat p elements and push all informations into appropriate place
 // let parent = document.querySelector('#description2');
-let parent = document.getElementById('description2');
+let parent2 = document.getElementById('description2');
+let texts = [
+    movieDataAsArray[1][0], 
+    movieDataAsArray[1][1].plot, 
+    movieDataAsArray[1][1].cast,
+    movieDataAsArray[1][1].runtime,
+    movieDataAsArray[1][1].rating,
+    movieDataAsArray[1][1].year,];
 
-for (let i = 0; i <= 4; i++) {
+    console.log(texts);
+
+
+for (let i = 0; i < texts.length; i++) {
 
     let p = document.createElement('p');
 
-    p.textContent = movieDataAsArray[1][0];
-    parent.appendChild(p);
+    p.textContent = texts[i];
+    parent2.appendChild(p);
 }
