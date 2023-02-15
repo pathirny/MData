@@ -25,7 +25,11 @@ main {
     align-items: flex-start;
     margin: 10px;
 }
-.description{
+#darj-container,
+#tenenbaums-container,
+#mrfox-container,
+#budapest-container
+{
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -8,44 +8,82 @@ const movieDataAsArray = Object.entries(movieData);
 // working with these array as seen below allos me to access each key and value in the objects
 // console.log(movieDataAsArray[0][1])
 
-// This function will push the array value to html
-function first () {
-    let plot = movieDataAsArray[0][1].plot;
-    let rating = movieDataAsArray[0][1].rating;
-    let darjeeling = movieDataAsArray[0][0];
-    let year = movieDataAsArray[0][1].year;
-    let cast = movieDataAsArray[0][1].cast;
-    let runtime = movieDataAsArray[0][1].runtime;
+// Darjeeling Limited Loop
+    let darjContainer = document.getElementById('darj-container');
+    let darjText = [
+     movieDataAsArray[0][0],
+     movieDataAsArray[0][1].plot, 
+     movieDataAsArray[0][1].cast.join(', '),
+     movieDataAsArray[0][1].runtime,
+     movieDataAsArray[0][1].rating,
+     movieDataAsArray[0][1].year
+];
+//for loop which creates each elements iterating through the darjText array
+ for (let i = 0; i < darjText.length; i++) {
+// Creates the p elements
+    const p = document.createElement('p');
+// This pushes the darjText to the 'p' elements
+    p.textContent = darjText[i];
+// Appends the p element to the darj container parent
+    darjContainer.appendChild(p);
+};
 
-    document.getElementById("darjeeling").innerHTML = darjeeling;
-    document.getElementById("plot1").innerHTML = plot;
-    document.getElementById("rating1").innerHTML = rating;
-    document.getElementById("year1").innerHTML = year;
-    document.getElementById("cast1").innerHTML = cast;
-    document.getElementById("runtime1").innerHTML = runtime;
-}
+// Loop for The Royal Tenenbaums
+    let tenenbaumsContainer = document.getElementById('tenenbaums-container');
 
-first();
+    let tenenbaumsTexts = [
+     movieDataAsArray[1][0], 
+     movieDataAsArray[1][1].plot, 
+     movieDataAsArray[1][1].cast.join(', '),
+     movieDataAsArray[1][1].runtime,
+     movieDataAsArray[1][1].rating,
+     movieDataAsArray[1][1].year
+    ];
 
+    for (let i = 0; i < tenenbaumsTexts.length; i++) {
 
-// Next create a for loop which will creat p elements and push all informations into appropriate place
-// let parent = document.querySelector('#description2');
-let parent2 = document.getElementById('description2');
-let texts = [
-    movieDataAsArray[1][0], 
-    movieDataAsArray[1][1].plot, 
-    movieDataAsArray[1][1].cast,
-    movieDataAsArray[1][1].runtime,
-    movieDataAsArray[1][1].rating,
-    movieDataAsArray[1][1].year,];
+    const p = document.createElement('p');
+    
+     p.textContent = tenenbaumsTexts[i];
+     tenenbaumsContainer.appendChild(p);
+};
 
-    console.log(texts);
+// loop for Fantastic Mr.Fox
+let mrFoxContainer = document.getElementById('mrfox-container');
 
+let mrFoxTexts = [
+ movieDataAsArray[2][0], 
+ movieDataAsArray[2][1].plot, 
+ movieDataAsArray[2][1].cast.join(', '),
+ movieDataAsArray[2][1].runtime,
+ movieDataAsArray[2][1].rating,
+ movieDataAsArray[2][1].year
+];
 
-for (let i = 0; i < texts.length; i++) {
+for (let i = 0; i < mrFoxTexts.length; i++) {
 
-    let p = document.createElement('p');
+ const p = document.createElement('p');
 
-    p.textContent = texts[i];
-    parent2.appendChild(p);
-}
+ p.textContent = mrFoxTexts[i];
+ mrFoxContainer.appendChild(p);
+};
+
+// Loop for The Grand Budapest Hotel
+let budapestContainer = document.getElementById('budapest-container');
+
+let budapestTexts = [
+ movieDataAsArray[3][0], 
+ movieDataAsArray[3][1].plot, 
+ movieDataAsArray[3][1].cast.join(', '),
+ movieDataAsArray[3][1].runtime,
+ movieDataAsArray[3][1].rating,
+ movieDataAsArray[3][1].year
+];
+
+for (let i = 0; i < budapestTexts.length; i++) {
+
+ const p = document.createElement('p');
+
+ p.textContent = budapestTexts[i];
+ budapestContainer.appendChild(p);
+};
