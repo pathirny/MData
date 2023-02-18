@@ -87,3 +87,9 @@ for (let i = 0; i < budapestTexts.length; i++) {
  p.textContent = budapestTexts[i];
  budapestContainer.appendChild(p);
 };
+
+
+// This sorts the array in alphabetical order
+// movieDataAsArray.sort();
+// console.log(movieDataAsArray)
+
