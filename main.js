@@ -39,3 +39,18 @@ for(const [title, item ] of movieDataAsArray) {
  // add image here
 
  listContainer.appendChild(listItem)
+}
+
+//Sort alphabetically
+
+let nameButton = document.querySelector("#name").innerHTML;
+
+function byName() {
+    
+    // get all the list items from the DOM 
+    let listContainer = document.getElementById("list-container");
+
+    console.log(listContainer)
+    listContainer = newSortedList;
+
+}
