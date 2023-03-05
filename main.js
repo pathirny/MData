@@ -38,19 +38,32 @@ for(const [title, item ] of movieDataAsArray) {
 
  // add image here
 
+ let movieImage = [
+    item.imgFile
+];
+
+    for (let j = 0; j < movieImage.length; j++) {
+
+        const img = document.createElement('img');
+    
+        img.image = movieImage[j];
+    
+        listItem.appendChild(img);
+     };
  listContainer.appendChild(listItem)
+ console.log(item.imageFile);
 }
 
 //Sort alphabetically
 
-let nameButton = document.querySelector("#name").innerHTML;
+// let nameButton = document.querySelector("#name").innerHTML;
 
-function byName() {
+// function byName() {
     
-    // get all the list items from the DOM 
-    let listContainer = document.getElementById("list-container");
+//     // get all the list items from the DOM 
+//     let listContainer = document.getElementById("list-container");
 
-    console.log(listContainer)
-    listContainer = newSortedList;
+//     console.log(listContainer)
+//     listContainer = newSortedList;
 
-}
+// };

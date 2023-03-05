@@ -25,10 +25,7 @@ main {
     align-items: flex-start;
     margin: 10px;
 }
-#darj-container,
-#tenenbaums-container,
-#mrfox-container,
-#budapest-container
+#list-container
 {
     display: flex;
     flex-direction: column;
