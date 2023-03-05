@@ -3,8 +3,7 @@ import { movieData } from './data.js';
 movieData;
 
 // !!!!! Objects.enteries changes the movieData object into arrays
-const movieDataAsArray = Object.entries(movieData);
-
+let movieDataAsArray = Object.entries(movieData);
 // working with these array as seen below allos me to access each key and value in the objects
 // console.log(movieDataAsArray[0][1])
 
@@ -88,8 +87,12 @@ for (let i = 0; i < budapestTexts.length; i++) {
  budapestContainer.appendChild(p);
 };
 
+//Sort alphabetically
 
-// This sorts the array in alphabetical order
-// movieDataAsArray.sort();
-// console.log(movieDataAsArray)
+let nameButton = document.querySelector("#name").innerHTML;
 
+nameButton;
+
+function byName() {
+    console.log(movieDataAsArray.sort());
+}
