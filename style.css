@@ -20,21 +20,20 @@ main {
     display: flex;
     flex-direction: column;
 }
-.container {
-    display: flex;
-    align-items: flex-start;
-    margin: 10px;
-}
-#list-container
-{
+#list-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 25px;
 }
+#list-container p:first-of-type {
+    font-weight: bold;
+    font-size: 24px;
+}
 section {
     height: 6rem;
     margin-top: 8rem;
+    border: solid 1px black;
 }
 img {
     width: 20rem;
