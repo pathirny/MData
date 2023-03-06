@@ -20,6 +20,7 @@ for(const [title, item ] of movieDataAsArray) {
     const listItem = document.createElement('div');    
 
     let darjText = [
+         item.title,
          item.plot, 
          item.cast.join(', '),
          item.runtime,
@@ -46,12 +47,11 @@ for(const [title, item ] of movieDataAsArray) {
 
         const img = document.createElement('img');
     
-        img.image = movieImage[j];
+        img.src = movieImage[j];
     
         listItem.appendChild(img);
      };
  listContainer.appendChild(listItem)
- console.log(item.imageFile);
 }
 
 //Sort alphabetically
