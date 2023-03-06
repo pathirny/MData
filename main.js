@@ -20,12 +20,12 @@ for(const [title, item ] of movieDataAsArray) {
     const listItem = document.createElement('div');    
 
     let darjText = [
-         item.title,
-         item.plot, 
-         item.cast.join(', '),
-         item.runtime,
-         item.rating,
-         item.year
+        title,
+        item.plot, 
+        item.cast.join(', '),
+        item.runtime,
+        item.rating,
+        item.year
     ];
 
  for (let i = 0; i < darjText.length; i++) {
