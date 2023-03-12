@@ -1,7 +1,7 @@
 import { movieData } from './data.js';
 
 let movieDataAsArray = Object.entries(movieData);
-
+// sort movie by year - old to new
 movieDataAsArray.sort(
 ([ key, { year: year1 }], [ key2, { year: year2 } ]) => {
     if(year1 == year2) {
@@ -13,6 +13,19 @@ movieDataAsArray.sort(
         return +1
     }
 })
+// sort movies by Rating - low to high
+
+movieDataAsArray.sort(
+    ([ key, { rating: rating1 }], [ key2, { rating : rating2 } ]) => {
+        if(rating1 == rating2) {
+            return 0;
+        }
+        if(rating1 <= rating2) {
+            return -1
+        } else {
+            return +1
+        }
+    })
 
 for(const [title, item ] of movieDataAsArray) {
 
